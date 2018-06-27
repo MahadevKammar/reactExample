@@ -23,6 +23,8 @@ let renderInput = ({ input, meta, label,type }) => {
 let User = (props) => { 
  //injected by Redux-form
     const { handleSubmit,submitting } =  props 
+   
+   
     var showValues1 = (values) => {
     props.authenticatingD(true);
     console.log("Is Authenticated? " +props.authenticating)
@@ -31,7 +33,6 @@ let User = (props) => {
       props.authenticatingD(false)
       window.alert(`You submitted:\n\n${JSON.stringify(values, null, 2)}`);     
       console.log(loading);
-    
     },2000);
  }
   
