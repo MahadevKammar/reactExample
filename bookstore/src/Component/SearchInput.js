@@ -16,7 +16,7 @@ class SearchInput extends Component {
   render() {
     return (
     <Well>
-        <FormControl type="text" value={this.state.value} placeholder="Search Book...." onChange={this.onChange.bind(this)}></FormControl>
+        <FormControl type="text" value={this.state.value} placeholder="Search Book...." onChange={this.onChange.bind(this)} onKeyUp={this.onChange.bind(this)}></FormControl>
     </Well>
     );
   }
