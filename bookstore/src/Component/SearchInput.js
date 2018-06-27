@@ -9,14 +9,14 @@ class SearchInput extends Component {
             value:props.value
         }
     }
-    onChange(event){
+    onChangeInput(event){
         this.setState({value:event.target.value});
         this.props.onChange(this.state.value);
     }
   render() {
     return (
     <Well>
-        <FormControl type="text" value={this.state.value} placeholder="Search Book...." onChange={this.onChange.bind(this)} onKeyUp={this.onChange.bind(this)}></FormControl>
+        <FormControl type="text" value={this.state.value} placeholder="Search Book...." onChange={this.onChangeInput.bind(this)} onKeyUp={this.onChangeInput.bind(this)}></FormControl>
     </Well>
     );
   }
